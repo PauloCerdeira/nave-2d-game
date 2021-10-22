@@ -70,3 +70,9 @@ shape = SubResource( 2 )
 
 [node name="laserPosition" type="Position2D" parent="player"]
 position = Vector2( 0, -31.3511 )
+
+[node name="leftLaserPosition" type="Position2D" parent="player"]
+position = Vector2( -36, 2 )
+
+[node name="rightLaserPosition" type="Position2D" parent="player"]
+position = Vector2( 36, 2 )

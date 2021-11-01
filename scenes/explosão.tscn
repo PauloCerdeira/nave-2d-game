@@ -32,5 +32,4 @@ volume_db = -21.454
 pitch_scale = 1.9
 autoplay = true
 
-[connection signal="animation_finished" from="." to="." method="_on_exploso_animation_finished"]
 [connection signal="finished" from="sound" to="." method="_on_sound_finished"]

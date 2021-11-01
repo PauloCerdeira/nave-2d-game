@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/player.gd" type="Script" id=1]
+[ext_resource path="res://sounds/sucesso_ou_pressButtom.wav" type="AudioStream" id=2]
+[ext_resource path="res://recursos/player.png" type="Texture" id=3]
+[ext_resource path="res://sounds/laser.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 27.3823
+height = 12.9141
+
+[node name="player" type="KinematicBody2D"]
+position = Vector2( 255.615, 868.498 )
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.629959 )
+shape = SubResource( 1 )
+
+[node name="laserPosition" type="Position2D" parent="."]
+position = Vector2( 0, -31.3511 )
+
+[node name="leftLaserPosition" type="Position2D" parent="."]
+position = Vector2( -36, 2 )
+
+[node name="rightLaserPosition" type="Position2D" parent="."]
+position = Vector2( 36, 2 )
+
+[node name="laserSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -19.024
+pitch_scale = 1.23
+
+[node name="pwSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -19.024
+pitch_scale = 1.23
+
+[node name="blinkingTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="blinkingTimer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="blinkingTimer" to="." method="_on_blinkingTimer_timeout"]

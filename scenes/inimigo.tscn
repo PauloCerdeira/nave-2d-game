@@ -15,3 +15,4 @@ offset = Vector2( -3.66855, 0.171944 )
 polygon = PoolVector2Array( 31.7, -16.9244, 22.9594, -0.502716, 17.3972, 16.9784, 11.5702, 34.1947, -0.0839233, 34.7244, -11.4732, 34.7244, -16.7705, 18.0379, -23.657, -0.237854, -30.8084, -15.0703, -39.0192, -28.8434, -10.9434, -30.6974, 11.3053, -30.9623, 39.1162, -29.1082 )
 
 [connection signal="area_entered" from="." to="." method="_on_inimigo_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_inimigo_body_entered"]

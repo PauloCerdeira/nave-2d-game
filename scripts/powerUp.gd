@@ -7,9 +7,9 @@ func _ready():
 func _process(delta):
 	self.position.y += vel * delta
 	if self.position.y > 850:
-		queue_free()
+		self.queue_free()
 
 
 func _on_powerUp_body_entered(body):
 	body.activate_special()
-	queue_free()
+	self.queue_free()

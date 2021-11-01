@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sucesso_ou_pressButtom.wav-038a566dc93553079665d1767596cf22.sample"
+
+[deps]
+
+source_file="res://sounds/sucesso_ou_pressButtom.wav"
+dest_files=[ "res://.import/sucesso_ou_pressButtom.wav-038a566dc93553079665d1767596cf22.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
